@@ -15,7 +15,7 @@
     {% do broker.update({"id": grains.get("node_index", 999) }) %}
   {% endif %}
   {# replace the original map with our (possibly) updated map#}
-  {% do config.update(broker) %}
+  {% do config.update({'broker': broker}) %}
 {% endwith  %}
 
 {% with name = kafka.get('name_template') % kafka %}

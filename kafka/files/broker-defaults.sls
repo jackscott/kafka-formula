@@ -1,4 +1,4 @@
-ENABLED="yes"
+ENABLE="yes"
 LOG_DIR={{ log_dir  }}
 CONFIG_HOME={{ config_dir }}
 JAVA_HOME={{ java_home }}
