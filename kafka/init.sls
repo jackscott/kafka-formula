@@ -18,16 +18,16 @@ kafka|setup:
     - require:
         - group: kafka|setup
           
-  file.directory:
-    - user: {{ kafka.user }}
-    - group: {{ kafka.user }}
-    - mode: 755
-    - makedirs: true
-    - names:
-        - {{ kafka.real_home }}
-    - recurse:
-        - user
-        - group
-    - unless: test -d {{ kafka.real_home }}
-    - require:
-        - user: kafka|setup
+  # file.directory:
+  #   - user: {{ kafka.user }}
+  #   - group: {{ kafka.user }}
+  #   - mode: 755
+  #   - makedirs: true
+  #   - names:
+  #       - {{ kafka.real_home }}
+  #   - recurse:
+  #       - user
+  #       - group
+  #   - unless: test -d {{ kafka.real_home }}
+  #   - require:
+  #       - user: kafka|setup
